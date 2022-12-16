@@ -1,0 +1,334 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="jquery.dropdownsearchlist.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="d-flex" style="font-size:24px">
+        <div style="width:300px;padding-top:150px">
+        </div>
+        <div style="width:300px;padding-top:150px" id="plugin-area"></div>
+
+        <div style="width:300px"></div>
+    </div>
+    <script src="jquery.dropdownsearchlist.js"></script>
+    <script>
+        var items = [
+            {
+                "id": "f42e79b9-a175-e711-80f4-3863bb356e20",
+                "name": "Amsterdam"
+            },
+            {
+                "id": "5c6d75d8-c18b-e711-80fc-3863bb3630a8",
+                "name": "Amsterdam DC"
+            },
+            {
+                "id": "3d87e465-aec0-df11-b8ec-00155da0f700",
+                "name": "Atlanta"
+            },
+            {
+                "id": "4087e465-aec0-df11-b8ec-00155da0f700",
+                "name": "Beijing"
+            },
+            {
+                "id": "3f87e465-aec0-df11-b8ec-00155da0f700",
+                "name": "Bengaluru"
+            },
+            {
+                "id": "3687e465-aec0-df11-b8ec-00155da0f700",
+                "name": "Boston"
+            },
+            {
+                "id": "44e43678-c28b-e711-80fc-3863bb3630a8",
+                "name": "Boydton DC"
+            },
+            {
+                "id": "b5c37aab-599c-e811-812b-3863bb34dac8",
+                "name": "Brussels"
+            },
+            {
+                "id": "fe2e79b9-a175-e711-80f4-3863bb356e20",
+                "name": "Calgary"
+            },
+            {
+                "id": "9f6a4df9-113e-e811-80fa-3863bb341e70",
+                "name": "Canberra (ANZ restricted)"
+            },
+            {
+                "id": "c4c4362c-38e8-e111-8c02-00155da0f700",
+                "name": "Charlotte"
+            },
+            {
+                "id": "3787e465-aec0-df11-b8ec-00155da0f700",
+                "name": "Chicago"
+            },
+            {
+                "id": "7eb37db8-c28b-e711-80fc-3863bb3630a8",
+                "name": "Chicago DC"
+            },
+            {
+                "id": "4187e465-aec0-df11-b8ec-00155da0f700",
+                "name": "Copenhagen"
+            },
+            {
+                "id": "3a87e465-aec0-df11-b8ec-00155da0f700",
+                "name": "Dallas"
+            },
+            {
+                "id": "cc0ad2bd-9a19-e011-824b-00155da0f700",
+                "name": "Data Center Tours"
+            },
+            {
+                "id": "082f79b9-a175-e711-80f4-3863bb356e20",
+                "name": "Denver"
+            },
+            {
+                "id": "b52d9cf8-b1c0-df11-b8ec-00155da0f700",
+                "name": "Detroit"
+            },
+            {
+                "id": "4287e465-aec0-df11-b8ec-00155da0f700",
+                "name": "Dubai"
+            },
+            {
+                "id": "4687e465-aec0-df11-b8ec-00155da0f700",
+                "name": "Dublin"
+            },
+            {
+                "id": "b776c74c-c38b-e711-80fc-3863bb3630a8",
+                "name": "Dublin DC"
+            },
+            {
+                "id": "4787e465-aec0-df11-b8ec-00155da0f700",
+                "name": "Edinburgh"
+            },
+            {
+                "id": "ecd9c63e-4903-e311-9c58-00155da0f700",
+                "name": "GuangZhou"
+            },
+            {
+                "id": "828d7fe7-de04-e311-9c58-00155da0f700",
+                "name": "Houston"
+            },
+            {
+                "id": "1dfb783c-b0c0-df11-b8ec-00155da0f700",
+                "name": "International"
+            },
+            {
+                "id": "3b87e465-aec0-df11-b8ec-00155da0f700",
+                "name": "Irvine"
+            },
+            {
+                "id": "d9950a71-f8bd-e811-812f-3863bb2e33b0",
+                "name": "Istanbul"
+            },
+            {
+                "id": "ed59b127-1271-e211-9189-00155da0f700",
+                "name": "Johannesburg"
+            },
+            {
+                "id": "107eeafa-b4e5-e511-b081-00155da08c02",
+                "name": "London"
+            },
+            {
+                "id": "fb01a949-72da-e511-b081-00155da08c02",
+                "name": "Los Angeles"
+            },
+            {
+                "id": "3a40b20f-ee7a-e011-b1cd-00155da0f700",
+                "name": "Mexico City"
+            },
+            {
+                "id": "21125964-591c-e411-b91e-00155da0ad03",
+                "name": "Milan"
+            },
+            {
+                "id": "4b87e465-aec0-df11-b8ec-00155da0f700",
+                "name": "Minneapolis"
+            },
+            {
+                "id": "cf8df0c2-076e-e411-932a-00155da0ad03",
+                "name": "Montreal"
+            },
+            {
+                "id": "4887e465-aec0-df11-b8ec-00155da0f700",
+                "name": "Moscow"
+            },
+            {
+                "id": "b978d644-c36a-e711-80e7-3863bb2e1588",
+                "name": "mtcprod"
+            },
+            {
+                "id": "bc711e67-2884-e311-8ffd-00155da0f700",
+                "name": "Mumbai"
+            },
+            {
+                "id": "4387e465-aec0-df11-b8ec-00155da0f700",
+                "name": "Munich"
+            },
+            {
+                "id": "3c87e465-aec0-df11-b8ec-00155da0f700",
+                "name": "New York"
+            },
+            {
+                "id": "9f97d06a-b1ae-e711-80ee-3863bb341e70",
+                "name": "Novosibirsk"
+            },
+            {
+                "id": "5f91bb61-0173-e911-a97e-000d3a15a497",
+                "name": "Oslo"
+            },
+            {
+                "id": "707fadef-e44e-ea11-a813-000d3a8c0957",
+                "name": "Ottawa"
+            },
+            {
+                "id": "4487e465-aec0-df11-b8ec-00155da0f700",
+                "name": "Paris"
+            },
+            {
+                "id": "21d890cd-b1c0-df11-b8ec-00155da0f700",
+                "name": "Philadelphia"
+            },
+            {
+                "id": "c0853b86-d38b-e711-80fc-3863bb3630a8",
+                "name": "Pune DC"
+            },
+            {
+                "id": "9d3af29e-d38b-e711-80fc-3863bb3630a8",
+                "name": "Quincy DC"
+            },
+            {
+                "id": "7bd77673-f03f-eb11-a813-000d3a53a8cd",
+                "name": "Redmond EBC - MTC Envisioning Theater"
+            },
+            {
+                "id": "b811f6dc-d38b-e711-80fc-3863bb3630a8",
+                "name": "Redmond Ridge DC"
+            },
+            {
+                "id": "e09162a7-2558-e511-a509-00155da0ad03",
+                "name": "Rio de Janeiro"
+            },
+            {
+                "id": "a5b2da11-1600-e611-a888-00155da08c02",
+                "name": "San Francisco"
+            },
+            {
+                "id": "76235233-9d9c-e011-96f1-00155da0f700",
+                "name": "Sao Paulo"
+            },
+            {
+                "id": "658ec338-c1ec-e511-a888-00155da08c02",
+                "name": "Seattle"
+            },
+            {
+                "id": "3c2f79b9-a175-e711-80f4-3863bb356e20",
+                "name": "Seoul"
+            },
+            {
+                "id": "06a65ebb-c0b3-e911-a97d-000d3a150c16",
+                "name": "Shanghai"
+            },
+            {
+                "id": "3887e465-aec0-df11-b8ec-00155da0f700",
+                "name": "Silicon Valley"
+            },
+            {
+                "id": "27d32ccf-7e01-ec11-94f0-000d3a13d8c6",
+                "name": "Silicon Valley DC"
+            },
+            {
+                "id": "f2ff5215-fce8-e011-a638-00155da0f700",
+                "name": "Singapore"
+            },
+            {
+                "id": "7dbd8a93-b3a1-e711-80eb-3863bb2e34f8",
+                "name": "Singapore CyberSecurity Center"
+            },
+            {
+                "id": "52c3ada2-d48b-e711-80fc-3863bb3630a8",
+                "name": "Singapore DC"
+            },
+            {
+                "id": "ca58ef84-eb6a-e811-810c-3863bb2e33b0",
+                "name": "St Louis"
+            },
+            {
+                "id": "442f79b9-a175-e711-80f4-3863bb356e20",
+                "name": "Stockholm"
+            },
+            {
+                "id": "462f79b9-a175-e711-80f4-3863bb356e20",
+                "name": "Sydney"
+            },
+            {
+                "id": "4587e465-aec0-df11-b8ec-00155da0f700",
+                "name": "Taipei"
+            },
+            {
+                "id": "912bf147-3c47-e111-a332-00155da0f700",
+                "name": "Tel Aviv"
+            },
+            {
+                "id": "3e87e465-aec0-df11-b8ec-00155da0f700",
+                "name": "Thames Valley"
+            },
+            {
+                "id": "4a87e465-aec0-df11-b8ec-00155da0f700",
+                "name": "Tokyo"
+            },
+            {
+                "id": "ec3b8ff9-d48b-e711-80fc-3863bb3630a8",
+                "name": "Tokyo DC"
+            },
+            {
+                "id": "35a31aa7-4c0d-e211-a8b0-00155da0f700",
+                "name": "Toronto"
+            },
+            {
+                "id": "522f79b9-a175-e711-80f4-3863bb356e20",
+                "name": "Toronto Downtown"
+            },
+            {
+                "id": "d4b871e4-afc0-df11-b8ec-00155da0f700",
+                "name": "USA"
+            },
+            {
+                "id": "abe54756-13ea-e511-a888-00155da08c02",
+                "name": "Warsaw"
+            },
+            {
+                "id": "3987e465-aec0-df11-b8ec-00155da0f700",
+                "name": "Washington DC"
+            },
+            {
+                "id": "0e66d2fc-c77d-e711-80f7-3863bb3cc560",
+                "name": "World Wide"
+            },
+            {
+                "id": "09b7d054-0f46-ec11-8c62-000d3a578be1",
+                "name": "Zurich"
+            }
+        ];
+        $("#plugin-area").createddsearchlist({
+            "payload": items,
+            "defaultId": "3a87e465-aec0-df11-b8ec-00155da0f700",
+            "fontSize": "11px",
+            "searchPosition":"bottom",
+            "label": "MTC",
+            onChange: function (ev,data) {
+                console.log(data);
+            }
+            });
+    </script>
+
+</body>
+</html>
