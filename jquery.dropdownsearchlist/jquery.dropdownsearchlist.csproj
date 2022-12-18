@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="dropdownsearchlist.png" />
     <Content Include="Index.html" />
     <Content Include="jquery.dropdownsearchlist.css" />
     <Content Include="jquery.dropdownsearchlist.js" />
