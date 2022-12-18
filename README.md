@@ -3,6 +3,7 @@
         <h4>jQuery DropdownSearchList</h4>
         jQuery DropdownSearchList is a jquery plugin to allow you to support a larger list of items and have search capability to filter the list.
         <br />
+        <img src="jquery.dropdownsearchlist/dropdownsearchlist1.png" height="260" />    
         <img src="jquery.dropdownsearchlist/dropdownsearchlist.png" height="260" /><br />
         <h4>Usage</h4>
         <div style="font-size:smaller">
@@ -26,8 +27,7 @@
             "searchPosition":"top", //Or bottom
             "label": "NFL Team",
             onChange: function (ev,data) {
-            console.log(data);
-            $("#selected-team").html(data.name);
+                $("#selected-team").html(data.name);
             }});
             </pre>
         </div>
