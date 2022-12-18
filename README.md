@@ -27,8 +27,7 @@
             "searchPosition":"top", //Or bottom
             "label": "NFL Team",
             onChange: function (ev,data) {
-            console.log(data);
-            $("#selected-team").html(data.name);
+                $("#selected-team").html(data.name);
             }});
             </pre>
         </div>
